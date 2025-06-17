@@ -15,12 +15,7 @@ pdf_extraction_master/
 ├──-- test_pdfs/ ← Drop PDFs here for testing
 ├──--output/ ← Extracted JSONs & summaries saved here
 
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/d8b88321-6bbc-4b38-9f44-0719ba84d15d)
 
 
 ---
