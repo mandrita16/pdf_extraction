@@ -138,5 +138,5 @@ output/filename_timestamp_summary.txt
 
 📬 Contact
 Developed by Mandrita Dasgupta
-For queries or contributions, open an issue or reach out on GitHub.
+For queries or contributions,open an issue or reach out on GitHub.
 
