@@ -6,14 +6,14 @@ This project is designed to extract **structured content** from PDF files includ
 
 ## 📁 Project Structure
 pdf_extraction_master/
-├── README.md ← You're reading it
-├── src/
-│ ├── pdf_extraction_pipeline.py ← Core extractor (EfficientPDFExtractor)
-│ ├── bulletproof_test.py ← Test environment & extraction
-│ ├── interactive_demo.py ← Menu-based CLI interface
-│ └── pdf_env/ ← (Optional) Virtual environment
-├── test_pdfs/ ← Drop PDFs here for testing
-├── output/ ← Extracted JSONs & summaries saved here
+├──-- README.md
+├──-- src/
+│      ├── pdf_extraction_pipeline.py ← Core extractor (EfficientPDFExtractor)
+│      ├── bulletproof_test.py ← Test environment & extraction
+│      ├── interactive_demo.py ← Menu-based CLI interface
+│      └── pdf_env/ ← (Optional) Virtual environment
+├──-- test_pdfs/ ← Drop PDFs here for testing
+├──--output/ ← Extracted JSONs & summaries saved here
 
 
 
