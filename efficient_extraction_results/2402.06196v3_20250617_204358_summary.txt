@@ -1,0 +1,26 @@
+PDF EXTRACTION SUMMARY
+                    ==================================================
+
+                    File: 2402.06196v3.pdf
+                    Size: 4.7 MB
+                    Hash: 26fae06605dc7ee2...
+                    Processed: 2025-06-17T20:43:58.033057
+                    Time: 1.95 seconds
+
+                    CONTENT STATISTICS
+                    ------------------------------
+                    Pages: 44
+                    Words: 32,034
+                    Characters: 209,028
+                    Images: 50
+                    Fonts: 57
+
+                    METADATA
+                    ------------------------------
+                    format: PDF 1.5
+creator: LaTeX with hyperref
+producer: pdfTeX-1.40.25
+creationDate: D:20250325010006Z
+modDate: D:20250325010006Z
+
+Processing Rate: 16,434 words/second

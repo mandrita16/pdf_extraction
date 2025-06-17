@@ -1,0 +1,28 @@
+PDF EXTRACTION SUMMARY
+                    ==================================================
+
+                    File: Practical-natural-language-processing-a-comprehensive-guide-to-building-real-world-nlp-systems.pdf
+                    Size: 30.6 MB
+                    Hash: e95d950b81b7cda4...
+                    Processed: 2025-06-17T15:40:29.723494
+                    Time: 55.00 seconds
+
+                    CONTENT STATISTICS
+                    ------------------------------
+                    Pages: 455
+                    Words: 135,768
+                    Characters: 874,799
+                    Images: 243
+                    Fonts: 57
+
+                    METADATA
+                    ------------------------------
+                    format: PDF 1.6
+title: Practical Natural Language Processing
+author: Sowmya  Vajjala;Bodhisattwa  Majumder;Anuj  Gupta;Harshit  Surana;
+creator: AH CSS Formatter V6.2 MR4 for Linux64 : 6.2.6.18551 (2014/09/24 15:00JST)
+producer: Antenna House PDF Output Library 6.2.609 (Linux64)
+creationDate: D:20200617144731Z
+modDate: D:20200618124937+05'30'
+
+Processing Rate: 2,468 words/second

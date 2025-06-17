@@ -1,0 +1,30 @@
+PDF EXTRACTION SUMMARY
+                    ==================================================
+
+                    File: large_language_models_for_reliable_information_extraction.pdf
+                    Size: 0.9 MB
+                    Hash: dc67a2db5334b143...
+                    Processed: 2025-06-17T20:43:59.129626
+                    Time: 0.38 seconds
+
+                    CONTENT STATISTICS
+                    ------------------------------
+                    Pages: 76
+                    Words: 21,498
+                    Characters: 136,405
+                    Images: 2
+                    Fonts: 62
+
+                    METADATA
+                    ------------------------------
+                    format: PDF 1.5
+title: Large Language Models for Reliable Information Extraction
+author: Lukas Baliunas
+subject: LaTeX
+keywords: LaTeX Master Thesis Engineering University of Cambridge
+creator: LaTeX with hyperref
+producer: pdfTeX-1.40.24
+creationDate: D:20230817110817Z
+modDate: D:20230817110817Z
+
+Processing Rate: 56,567 words/second
