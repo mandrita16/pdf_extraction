@@ -1,146 +1,86 @@
-Project Overview: PDF Extraction System
+# 📄 PDF Extraction System
 
+This project is designed to extract **structured content** from PDF files including **text, metadata, fonts, and images**, with robust error handling, optional image extraction, and an interactive command-line interface. It's powered by `PyMuPDF` for PDF processing, `Pillow` for image handling, and `NumPy` for efficient computations.
 
-This project is designed to extract structured content from PDF files, including text, metadata, fonts, and images, with robust error handling,optional image support, and interactive CLI tools. It uses PyMuPDF for rendering PDFs,Pillow for image processing, and NumPy for efficient computation.
+---
 
-
-
-FILE 1: pdf_extraction_pipeline.py
-✅ Purpose:
-This is the core engine of the entire system. It defines the class EfficientPDFExtractor, which performs the actual PDF processing and content extraction.
-
-What It Contains:
-EfficientPDFExtractor class:
-
-Handles file validation, caching, and hashing to avoid redundant processing.
-
-Uses PyMuPDF (fitz) to read PDFs page-by-page, which is both memory-efficient and fast.
-
-Extracts:
-
-Plain text (page.get_text())
-
-Font metadata
-
-Number of characters and words
-
-Embedded images (optional)
-
-Document metadata (author, title, etc.)
-
-extract_pdf_content() method:
-
-The heart of the pipeline. Iterates through all pages, collects structured content into a list of dictionaries (pages), and wraps everything into a PDFExtractionResult dataclass.
-
-process_pdf() alias:
-
-Ensures compatibility with test runners like bulletproof_test.py.
-
-save_result():
-
-Saves the extracted results in .json or .txt format, including a summary for quick viewing.
-
-demonstrate_usage():
-
-A standalone test runner that shows how the system performs single or batch extraction. Helpful for local CLI testing.
-
-✅ Why This Matters:
-It’s the processing backend. Everything else (tests, demos, CLI tools) plugs into this class to do the real extraction work.
-
-
-
-FILE 2: bulletproof_test.py
-✅ Purpose:
-This is a robust test harness designed to check whether your Python environment is properly configured and if the PDF extraction pipeline works end-to-end.
-
-What It Contains:
-Environment check:
-
-Verifies Python version and path
-
-Confirms PyMuPDF, Pillow, NumPy are installed
-
-PDF check:
-
-Looks inside the /test_pdfs/ directory to ensure at least one PDF is available for testing.
-
-Basic Extraction Test:
-
-Tries opening the PDF with fitz and extracts first-page text, image count, and metadata.
-
-Full Extraction Pipeline Test:
-
-Imports EfficientPDFExtractor from pdf_extraction_pipeline.py
-
-Runs the full extraction process and saves the result as .json
-
-✅ Why This Matters:
-This script is your first diagnostic tool. If this works, your system is fully functional. It's excellent for checking setup before deploying or developing further.
-
-
-
-📟 FILE 3: interactive_demo.py
-✅ Purpose:
-Provides a user-friendly command-line interface (CLI) to:
-
-List PDF files
-
-Extract content from a selected PDF
-
-Batch process all PDFs
-
-Open output folders directly
-
-What It Contains:
-Menu-driven interface with options from 0–5
-
-Uses os.startfile() or os.system('open') to open output folders
-
-Internally calls EfficientPDFExtractor to process files
-
-Handles exceptions and guides the user interactively
-
-✅ Why This Matters:
-This tool is great for non-programmers or testers who want to run the extraction process without writing any code. It's also helpful for demoing the pipeline in front of stakeholders.
-
-Folder Structure
+## 🚀 Project Structure
 
 pdf_extraction_master/
-│    
+│
 ├── README.md 
 ├── src/
-│ ├── pdf_extraction_pipeline.py ← Core extractor engine (EfficientPDFExtractor class)
-│ ├── bulletproof_test.py ← Bulletproof testing script with step-by-step validation
-│ ├── interactive_demo.py ← User-friendly interactive CLI interface
-│ └── pdf_env/ ← Local virtual environment (optional; not uploaded to GitHub)
-├── test_pdfs/ ← Folder to drop sample/test PDFs
-├── output/ ← Results saved in JSON and plain text format
+│ ├── pdf_extraction_pipeline.py ← Core engine (EfficientPDFExtractor class)
+│ ├── bulletproof_test.py ← Bulletproof test script for validation
+│ ├── interactive_demo.py ← Menu-based CLI for non-dev usage
+│ └── pdf_env/ ← (Optional) Local virtual environment
+├── test_pdfs/ ← Place your PDFs here
+├── output/ ← Extracted results (JSON + summary text)
 
 
- 
-Library	Why It's Used
-PyMuPDF	Main engine to read, render, and extract PDF data
-Pillow	Handles image manipulation and saving
-NumPy	Used for handling image arrays, speed optimization
-json	For saving structured output in .json files
-hashlib	Used to generate MD5 hash of files to avoid duplicate processing
-logging	Displays progress info, warnings, and errors cleanly
-datetime	Adds timestamp to outputs
+---
 
+## 📦 Dependencies & Libraries
 
+| Library      | Purpose                                          |
+|--------------|--------------------------------------------------|
+| PyMuPDF      | High-performance PDF reading, rendering, parsing |
+| Pillow       | Image manipulation and saving                    |
+| NumPy        | Efficient handling of image arrays and stats     |
+| json         | Saving structured output                         |
+| hashlib      | Avoid reprocessing same files (via MD5 hashes)   |
+| logging      | For clean status updates and debugging           |
+| datetime     | Timestamped result saving                        |
 
-Follow these steps after **downloading** or **cloning** the repo from GitHub:
+---
 
-### ✅ Step 1: Open Terminal in `src/` folder
+## 🧠 What Each File Does
 
-In VS Code or your system terminal:
+### ✅ `pdf_extraction_pipeline.py`
+The **core processing engine**:
+- Contains the `EfficientPDFExtractor` class.
+- Uses `fitz` to read PDFs efficiently page-by-page.
+- Extracts: text, font info, word/char counts, document metadata, images.
+- Outputs results to `.json` and `.txt` formats.
+- `demonstrate_usage()` lets you test single or batch processing quickly.
 
+> This is the brain of your project.
+
+---
+
+### ✅ `bulletproof_test.py`
+A **diagnostic script** to validate:
+- Your Python version and environment
+- Required libraries are installed
+- Whether PDFs are readable and processable
+- If extraction and saving works properly
+
+> Use this to test everything works before pushing to production or demoing.
+
+---
+
+### ✅ `interactive_demo.py`
+An **interactive, menu-driven CLI** for non-coders:
+- Lets users list available PDFs
+- Choose one for extraction
+- Batch process all PDFs in `test_pdfs/`
+- Opens output folder directly
+
+> Great for testers, non-devs, or showcasing functionality.
+
+---
+
+## 🛠️ Installation & Setup
+
+### ✅ Step 1: Clone the Repo & Open Terminal
+
+```bash
 cd pdf_extraction_master/src
-### ✅ Step 2: Create Virtual Environment
 
+### ✅ Step 2: Create Virtual Environment
 python -m venv pdf_env
 
-### ✅ Step 3: Activate the Environment
+### ✅ Step 3: Activate Environment
 Windows:
 
 .\pdf_env\Scripts\activate
@@ -149,79 +89,63 @@ macOS/Linux:
 
 source pdf_env/bin/activate
 
-### ✅ Step 4: Install Required Packages
+✅ Step 4: Install Required Libraries
 
-pip install PyMuPDF
-pip install Pillow
-pip install numpy
-pip install requests
+pip install PyMuPDF Pillow numpy requests
 
-### ✅ Step 5:
+✅ Optional :
 
-Test Core Installation:
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+pip install transformers opencv-python pdf-extract-kit docling
+
+✅ Step 5: Verify Install 
 
 python -c "import fitz; print('PyMuPDF works!')"
 python -c "import PIL; print('Pillow works!')"
-python -c "import numpy; print('Numpy works!')"
+python -c "import numpy; print('NumPy works!')"
 
-Advanced Packages 
-
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
-pip install transformers
-pip install opencv-python
-pip install pdf-extract-kit
-pip install docling
-
-### These are the core libraries:
-
-PyMuPDF for PDF parsing
-
-Pillow for image handling
-
-NumPy for future-ready array/image ops
-
- Run Bulletproof Tests
-This script checks if:
-
-Python is working ✅
-
-Required packages are installed ✅
-
-A PDF is readable ✅
-
-The full pipeline runs end to end ✅
+🧪 Test Your Setup
 
 python bulletproof_test.py
+Expected:
 
-Expected output :
+✅ Metadata shown
 
-Metadata of PDF
+✅ Page count, word/image stats
 
-Pages scanned
+✅ JSON saved in /output
 
-Words and images counted
-
-JSON saved in output/ folder
-
- Launch the Interactive CLI Demo
- For users who prefer a menu-based UI to select PDFs and view output:
+💻 Run the Interactive Demo
 
 python interactive_demo.py
 
-Features:
+Menu lets you:
 
-View PDFs in test_pdfs/
+📄 List PDFs in /test_pdfs/
 
-Select one for extraction
+🔄 Run extraction on selected file
 
-Batch process all files
+📊 Batch process all PDFs
 
-Open output folder from command line
+📁 Open output folder
 
- How to Use with Your Own PDFs
+📥 Using Your Own PDFs
 Drop any .pdf files into test_pdfs/
 
-Run either bulletproof_test.py or interactive_demo.py
+ Run either:
 
-Output files will be saved to output/ in both .json and .txt summary formats
+python bulletproof_test.py
+or
+
+python interactive_demo.py
+
+Results will be saved as:
+
+output/filename_timestamp.json
+
+output/filename_timestamp_summary.txt
+
+📬 Contact
+Developed by Mandrita Dasgupta
+For queries or contributions, open an issue or reach out on GitHub.
 
