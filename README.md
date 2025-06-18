@@ -5,8 +5,8 @@ This project is designed to extract **structured content** from PDF files includ
 ---
 
 ## 📁 Project Structure
+![image](https://github.com/user-attachments/assets/33ae90ee-5b1f-40a3-aea2-f6cc98a0e636)
 
-![image](https://github.com/user-attachments/assets/d8b88321-6bbc-4b38-9f44-0719ba84d15d)
 
 
 Check this out...it contains all the folders and files required as well as the output and sample PDFs used by me-
