@@ -66,9 +66,9 @@ An **interactive, menu-driven CLI** for non-coders:
 
 ## 🛠️ Installation & Setup
 
-### ✅ Step 1: Clone the Repo & Open Terminal
 
 ```bash
+### ✅ Step 1: Clone the Repo & Open Terminal
 cd pdf_extraction_master/src
 
 ### ✅ Step 2: Create Virtual Environment
