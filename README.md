@@ -9,6 +9,7 @@ This project is designed to extract **structured content** from PDF files includ
 ![image](https://github.com/user-attachments/assets/d8b88321-6bbc-4b38-9f44-0719ba84d15d)
 
 
+https://drive.google.com/drive/folders/1tw3tPCtie7Rxe0exdmX67xRvY6rM68NW
 ---
 
 ## 📦 Dependencies & Libraries
